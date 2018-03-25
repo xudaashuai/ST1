@@ -1,0 +1,810 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 30,
+    "passes": 0,
+    "pending": 0,
+    "failures": 30,
+    "start": "2018-03-25T12:36:20.159Z",
+    "end": "2018-03-25T12:36:20.358Z",
+    "duration": 199,
+    "testsRegistered": 30,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "40f70e09-27c2-46ee-9c26-4f48be61b2e7",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "b552c411-b860-48cc-8aee-38569d2bf590",
+        "title": "免费行李额度的测试",
+        "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
+        "file": "\\test\\main.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "f5a47da6-d199-4512-92bf-8078b65da9c2",
+            "title": "国内航班的测试",
+            "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
+            "file": "\\test\\main.test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "普通人员头等舱的测试",
+                "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员头等舱的测试",
+                "timedOut": false,
+                "duration": 5,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [40], maxLength: Number.MAX_VALUE });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:8:136)",
+                  "diff": " {\n+   \"items\": [\n+     40\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 40\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "b1c1e509-09ef-49a4-876d-c58220b38615",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员公务舱的测试",
+                "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员公务舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [30], maxLength: Number.MAX_VALUE });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:11:136)",
+                  "diff": " {\n+   \"items\": [\n+     30\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 30\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "7160fcc4-840e-4b95-84a2-2912ba8e32a1",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员明珠经济舱的测试",
+                "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员明珠经济舱的测试",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [20], maxLength: Number.MAX_VALUE });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:14:138)",
+                  "diff": " {\n+   \"items\": [\n+     20\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 20\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "14d85e65-4bdd-4b6f-a51b-104c869f317c",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员经济舱的测试",
+                "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员经济舱的测试",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [20], maxLength: Number.MAX_VALUE });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:17:136)",
+                  "diff": " {\n+   \"items\": [\n+     20\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 20\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "f6c54305-7d80-4a82-8851-e86fed1e0747",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员不占座婴儿的测试",
+                "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员不占座婴儿的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [10], maxLength: Number.MAX_VALUE });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:20:138)",
+                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 10\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "105fad09-2dd2-4048-9fda-d5f4a7ae77ff",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "b1c1e509-09ef-49a4-876d-c58220b38615",
+              "7160fcc4-840e-4b95-84a2-2912ba8e32a1",
+              "14d85e65-4bdd-4b6f-a51b-104c869f317c",
+              "f6c54305-7d80-4a82-8851-e86fed1e0747",
+              "105fad09-2dd2-4048-9fda-d5f4a7ae77ff"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 7,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "061d7a8c-3473-49e4-816b-27813b8bd5b8",
+            "title": "区域1航班的测试",
+            "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
+            "file": "\\test\\main.test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "普通人员头等舱的测试",
+                "fullTitle": "免费行李额度的测试 区域1航班的测试 普通人员头等舱的测试",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:25:135)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "7d4d3ab6-b12c-43ef-96ad-4490bb24c50e",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员公务舱的测试",
+                "fullTitle": "免费行李额度的测试 区域1航班的测试 普通人员公务舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:28:135)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "20587c67-ee79-4fb7-a51d-02a3130b6b8f",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员明珠经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域1航班的测试 普通人员明珠经济舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:31:137)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "aa96872e-2e8f-4d0b-be3f-c964b2fbaace",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域1航班的测试 普通人员经济舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:34:135)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "16854bd4-1230-4319-a8bf-bfe57b3d89eb",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员不占座婴儿的测试",
+                "fullTitle": "免费行李额度的测试 区域1航班的测试 普通人员不占座婴儿的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:37:137)",
+                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "b4328988-f7df-4d54-b8d1-2876bac29756",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "7d4d3ab6-b12c-43ef-96ad-4490bb24c50e",
+              "20587c67-ee79-4fb7-a51d-02a3130b6b8f",
+              "aa96872e-2e8f-4d0b-be3f-c964b2fbaace",
+              "16854bd4-1230-4319-a8bf-bfe57b3d89eb",
+              "b4328988-f7df-4d54-b8d1-2876bac29756"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "6eeca2c0-a4e9-4e99-9268-ec2306dfa8de",
+            "title": "区域2航班的测试",
+            "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
+            "file": "\\test\\main.test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "普通人员头等舱的测试",
+                "fullTitle": "免费行李额度的测试 区域2航班的测试 普通人员头等舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:42:141)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "ee0710b8-eed9-4658-ab26-9b5a73686b26",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员公务舱的测试",
+                "fullTitle": "免费行李额度的测试 区域2航班的测试 普通人员公务舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:45:141)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "3993d4b6-db32-44a0-ac0f-805d45b1132e",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员明珠经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域2航班的测试 普通人员明珠经济舱的测试",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:48:143)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "5587a43e-5e62-4909-9104-00aa382ae578",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域2航班的测试 普通人员经济舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:51:141)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "5d56ca2f-ec84-40e0-beaa-acc49ada2025",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员不占座婴儿的测试",
+                "fullTitle": "免费行李额度的测试 区域2航班的测试 普通人员不占座婴儿的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:54:143)",
+                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "e7d5f444-679c-4a72-9a87-965b4bf4d639",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "ee0710b8-eed9-4658-ab26-9b5a73686b26",
+              "3993d4b6-db32-44a0-ac0f-805d45b1132e",
+              "5587a43e-5e62-4909-9104-00aa382ae578",
+              "5d56ca2f-ec84-40e0-beaa-acc49ada2025",
+              "e7d5f444-679c-4a72-9a87-965b4bf4d639"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "7c6a32e6-de21-4b6c-be3a-3772ebbbbdbb",
+            "title": "区域3航班的测试",
+            "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
+            "file": "\\test\\main.test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "普通人员头等舱的测试",
+                "fullTitle": "免费行李额度的测试 区域3航班的测试 普通人员头等舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:59:135)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "a155554c-e2d6-4ab5-94de-f64927df8bc6",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员公务舱的测试",
+                "fullTitle": "免费行李额度的测试 区域3航班的测试 普通人员公务舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:62:135)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "030b4903-cfbd-471f-a901-c98744affef4",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员明珠经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域3航班的测试 普通人员明珠经济舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:65:137)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "cbb1fb83-6dd8-4cd3-ab74-eefafc308288",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域3航班的测试 普通人员经济舱的测试",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:68:135)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "81bd3890-0125-49d0-ad57-b48a75859197",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员不占座婴儿的测试",
+                "fullTitle": "免费行李额度的测试 区域3航班的测试 普通人员不占座婴儿的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:71:137)",
+                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "ef029668-d45e-4446-a435-8995ec53ad89",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "a155554c-e2d6-4ab5-94de-f64927df8bc6",
+              "030b4903-cfbd-471f-a901-c98744affef4",
+              "cbb1fb83-6dd8-4cd3-ab74-eefafc308288",
+              "81bd3890-0125-49d0-ad57-b48a75859197",
+              "ef029668-d45e-4446-a435-8995ec53ad89"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "882ecc6d-6ece-4697-b0b0-4a9825d18266",
+            "title": "区域4航班的测试",
+            "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
+            "file": "\\test\\main.test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "普通人员头等舱的测试",
+                "fullTitle": "免费行李额度的测试 区域4航班的测试 普通人员头等舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:76:135)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "a36c36c2-5dc2-4ec1-a5a2-8976a84e70af",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员公务舱的测试",
+                "fullTitle": "免费行李额度的测试 区域4航班的测试 普通人员公务舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [23, 23, 23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:79:135)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 3\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "3fb901a1-89fd-4bbe-baad-7857ba846940",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员明珠经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域4航班的测试 普通人员明珠经济舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:82:137)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "b6c6c64d-c5cf-4bcc-b6e7-2ce025709601",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域4航班的测试 普通人员经济舱的测试",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:85:135)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "d6304e38-abc1-4f7d-8196-8b51dd67089b",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员不占座婴儿的测试",
+                "fullTitle": "免费行李额度的测试 区域4航班的测试 普通人员不占座婴儿的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:88:137)",
+                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "1cb850b1-962d-418d-8767-1af01a378620",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "a36c36c2-5dc2-4ec1-a5a2-8976a84e70af",
+              "3fb901a1-89fd-4bbe-baad-7857ba846940",
+              "b6c6c64d-c5cf-4bcc-b6e7-2ce025709601",
+              "d6304e38-abc1-4f7d-8196-8b51dd67089b",
+              "1cb850b1-962d-418d-8767-1af01a378620"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "30a4995a-b7fa-4e6d-9348-d7ee0930c016",
+            "title": "区域5航班的测试",
+            "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
+            "file": "\\test\\main.test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "普通人员头等舱的测试",
+                "fullTitle": "免费行李额度的测试 区域5航班的测试 普通人员头等舱的测试",
+                "timedOut": false,
+                "duration": 1,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:93:135)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "b4f0e502-ba4e-44f2-9751-7edb9dae1329",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员公务舱的测试",
+                "fullTitle": "免费行李额度的测试 区域5航班的测试 普通人员公务舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:96:135)",
+                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "a7d7938c-ab60-4e42-85fb-8daa62e96433",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员明珠经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域5航班的测试 普通人员明珠经济舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:99:137)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "2479f19e-a25b-417d-b265-c463b3931a64",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员经济舱的测试",
+                "fullTitle": "免费行李额度的测试 区域5航班的测试 普通人员经济舱的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [23], maxLength: 158 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:102:135)",
+                  "diff": " {\n+   \"items\": [\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "c3bab6f6-e3d0-4633-ab2d-391a36a6a22b",
+                "isHook": false,
+                "skipped": false
+              },
+              {
+                "title": "普通人员不占座婴儿的测试",
+                "fullTitle": "免费行李额度的测试 区域5航班的测试 普通人员不占座婴儿的测试",
+                "timedOut": false,
+                "duration": 0,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "err": {
+                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:105:137)",
+                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                },
+                "isRoot": false,
+                "uuid": "4ca9235a-6085-4d51-9028-bd2a413c6304",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "b4f0e502-ba4e-44f2-9751-7edb9dae1329",
+              "a7d7938c-ab60-4e42-85fb-8daa62e96433",
+              "2479f19e-a25b-417d-b265-c463b3931a64",
+              "c3bab6f6-e3d0-4633-ab2d-391a36a6a22b",
+              "4ca9235a-6085-4d51-9028-bd2a413c6304"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
