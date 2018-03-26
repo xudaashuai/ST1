@@ -66,13 +66,15 @@ function getFreeBabbage(traveler, flight) {
           result = {
             maxWeight: 40,
             number:1,
-            maxLength: Number.MAX_VALUE
+            maxLength:60,
+            maxWidth:40,
+            maxHeight:100
           }
           break;
         default:
           result = {
             maxWeight:32,
-            maxLength: 158,
+            maxSize: 158,
             number:3,
           }
           break;
@@ -84,21 +86,23 @@ function getFreeBabbage(traveler, flight) {
           result = {
             maxWeight: 30,
             number:1,
-            maxLength: Number.MAX_VALUE
+            maxLength:60,
+            maxWidth:40,
+            maxHeight:100
           }
           break;
         case  Flight.Type.区域四:
           result = {
             maxWeight: 23,
             number:3,
-            maxLength: 158
+            maxSize: 158
           }
           break;
         default:
           result = {
             maxWeight: 32,
             number:2,
-            maxLength: 158
+            maxSize: 158
           }
           break;
       }
@@ -108,7 +112,7 @@ function getFreeBabbage(traveler, flight) {
           result = {
             maxWeight: 23,
             number:2,
-            maxLength: 158
+            maxSize: 158
           }
           break;
       }
@@ -118,7 +122,9 @@ function getFreeBabbage(traveler, flight) {
           result = {
             maxWeight: 20,
             number:1,
-            maxLength: Number.MAX_VALUE
+            maxLength:60,
+            maxWidth:40,
+            maxHeight:100
           }
           break;
         case  Flight.Type.区域二_不涉及美国:
@@ -126,7 +132,7 @@ function getFreeBabbage(traveler, flight) {
           result = {
             maxWeight: 32,
             number:1,
-            maxLength: 158
+            maxSize: 158
           }
           break;
         case  Flight.Type.区域四:
@@ -134,14 +140,14 @@ function getFreeBabbage(traveler, flight) {
           result = {
             maxWeight: 23,
             number:1,
-            maxLength: 158
+            maxSize: 158,
           }
           break;
         default:
           result = {
             maxWeight: 23,
             number:2,
-            maxLength: 158
+            maxSize: 158
           }
           break;
       }
@@ -152,14 +158,16 @@ function getFreeBabbage(traveler, flight) {
           result = {
             maxWeight: 10,
             number:1,
-            maxLength: Number.MAX_VALUE
+            maxLength:60,
+            maxWidth:40,
+            maxHeight:100
           }
           break;
         default:
           result = {
             maxWeight: 0,
             number:1,
-            maxLength: 115
+            maxSize: 115
           }
           break;
       }

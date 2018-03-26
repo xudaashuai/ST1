@@ -2,14 +2,14 @@
   "stats": {
     "suites": 7,
     "tests": 30,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 30,
-    "start": "2018-03-25T12:36:20.159Z",
-    "end": "2018-03-25T12:36:20.358Z",
-    "duration": 199,
+    "failures": 29,
+    "start": "2018-03-26T16:42:13.774Z",
+    "end": "2018-03-26T16:42:14.004Z",
+    "duration": 230,
     "testsRegistered": 30,
-    "passPercent": 0,
+    "passPercent": 3.3,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "40f70e09-27c2-46ee-9c26-4f48be61b2e7",
+    "uuid": "20517d36-f9e5-426b-b701-c92336b648b9",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "b552c411-b860-48cc-8aee-38569d2bf590",
+        "uuid": "fa847dc2-f67e-45fa-af1e-a927739ad273",
         "title": "免费行李额度的测试",
         "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
         "file": "\\test\\main.test.js",
@@ -37,7 +37,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "f5a47da6-d199-4512-92bf-8078b65da9c2",
+            "uuid": "fad95c5d-b30b-4e04-b84c-bdaf02d16980",
             "title": "国内航班的测试",
             "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
             "file": "\\test\\main.test.js",
@@ -48,19 +48,16 @@
                 "title": "普通人员头等舱的测试",
                 "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员头等舱的测试",
                 "timedOut": false,
-                "duration": 5,
-                "state": "failed",
-                "pass": false,
-                "fail": true,
+                "duration": 3,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [40], maxLength: Number.MAX_VALUE });",
-                "err": {
-                  "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:8:136)",
-                  "diff": " {\n+   \"items\": [\n+     40\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 40\n-   \"number\": 1\n }\n"
-                },
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ maxWeight: 40, number: 1,\n  maxLength: 60,\n  maxWidth: 40,\n  maxHeight: 100 });",
+                "err": {},
                 "isRoot": false,
-                "uuid": "b1c1e509-09ef-49a4-876d-c58220b38615",
+                "uuid": "ac8f5e08-e70a-479c-899b-3d4a2e678661",
                 "isHook": false,
                 "skipped": false
               },
@@ -68,19 +65,19 @@
                 "title": "普通人员公务舱的测试",
                 "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员公务舱的测试",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 4,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [30], maxLength: Number.MAX_VALUE });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({\n  items: [30],\n  maxLength: Number.MAX_VALUE\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:11:136)",
-                  "diff": " {\n+   \"items\": [\n+     30\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 30\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:17:139)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxHeight\": 100\n-   \"maxLength\": 60\n-   \"maxWeight\": 30\n-   \"maxWidth\": 40\n-   \"number\": 1\n+   \"items\": [\n+     30\n+   ]\n+   \"maxLength\": 1.7976931348623157e+308\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "7160fcc4-840e-4b95-84a2-2912ba8e32a1",
+                "uuid": "75a6757d-83a5-426d-b83c-5c12a879a24d",
                 "isHook": false,
                 "skipped": false
               },
@@ -88,19 +85,19 @@
                 "title": "普通人员明珠经济舱的测试",
                 "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员明珠经济舱的测试",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [20], maxLength: Number.MAX_VALUE });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({\n  items: [20],\n  maxLength: Number.MAX_VALUE\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:14:138)",
-                  "diff": " {\n+   \"items\": [\n+     20\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 20\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:23:141)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxHeight\": 100\n-   \"maxLength\": 60\n-   \"maxWeight\": 20\n-   \"maxWidth\": 40\n-   \"number\": 1\n+   \"items\": [\n+     20\n+   ]\n+   \"maxLength\": 1.7976931348623157e+308\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "14d85e65-4bdd-4b6f-a51b-104c869f317c",
+                "uuid": "2f4ace12-502c-4cd5-894e-0bd450caf71e",
                 "isHook": false,
                 "skipped": false
               },
@@ -108,19 +105,19 @@
                 "title": "普通人员经济舱的测试",
                 "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员经济舱的测试",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [20], maxLength: Number.MAX_VALUE });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({\n  items: [20],\n  maxLength: Number.MAX_VALUE\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:17:136)",
-                  "diff": " {\n+   \"items\": [\n+     20\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 20\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:29:139)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxHeight\": 100\n-   \"maxLength\": 60\n-   \"maxWeight\": 20\n-   \"maxWidth\": 40\n-   \"number\": 1\n+   \"items\": [\n+     20\n+   ]\n+   \"maxLength\": 1.7976931348623157e+308\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "f6c54305-7d80-4a82-8851-e86fed1e0747",
+                "uuid": "7d4ce85b-538a-45d1-bc27-b9b276a23212",
                 "isHook": false,
                 "skipped": false
               },
@@ -128,41 +125,42 @@
                 "title": "普通人员不占座婴儿的测试",
                 "fullTitle": "免费行李额度的测试 国内航班的测试 普通人员不占座婴儿的测试",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({ items: [10], maxLength: Number.MAX_VALUE });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.国内航班))).to.be.deep.equal({\n  items: [10],\n  maxLength: Number.MAX_VALUE\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:20:138)",
-                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 1.7976931348623157e+308\n-   \"maxWeight\": 10\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:35:141)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxHeight\": 100\n-   \"maxLength\": 60\n-   \"maxWeight\": 10\n-   \"maxWidth\": 40\n-   \"number\": 1\n+   \"items\": [\n+     10\n+   ]\n+   \"maxLength\": 1.7976931348623157e+308\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "105fad09-2dd2-4048-9fda-d5f4a7ae77ff",
+                "uuid": "641087f2-268a-4c20-986b-9b6564c2a942",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
-            "passes": [],
+            "passes": [
+              "ac8f5e08-e70a-479c-899b-3d4a2e678661"
+            ],
             "failures": [
-              "b1c1e509-09ef-49a4-876d-c58220b38615",
-              "7160fcc4-840e-4b95-84a2-2912ba8e32a1",
-              "14d85e65-4bdd-4b6f-a51b-104c869f317c",
-              "f6c54305-7d80-4a82-8851-e86fed1e0747",
-              "105fad09-2dd2-4048-9fda-d5f4a7ae77ff"
+              "75a6757d-83a5-426d-b83c-5c12a879a24d",
+              "2f4ace12-502c-4cd5-894e-0bd450caf71e",
+              "7d4ce85b-538a-45d1-bc27-b9b276a23212",
+              "641087f2-268a-4c20-986b-9b6564c2a942"
             ],
             "pending": [],
             "skipped": [],
-            "duration": 7,
+            "duration": 8,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
           },
           {
-            "uuid": "061d7a8c-3473-49e4-816b-27813b8bd5b8",
+            "uuid": "6484984c-3c88-4661-b088-0413f50470ac",
             "title": "区域1航班的测试",
             "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
             "file": "\\test\\main.test.js",
@@ -173,19 +171,19 @@
                 "title": "普通人员头等舱的测试",
                 "fullTitle": "免费行李额度的测试 区域1航班的测试 普通人员头等舱的测试",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({\n  items: [32, 32, 32],\n  maxLength: 158\n});",
                 "err": {
-                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:25:135)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                  "message": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:43:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "7d4d3ab6-b12c-43ef-96ad-4490bb24c50e",
+                "uuid": "98834249-acea-4c70-8a8b-2218b6cafeb4",
                 "isHook": false,
                 "skipped": false
               },
@@ -198,14 +196,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({\n  items: [32, 32],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:28:135)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:49:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n+   \"items\": [\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "20587c67-ee79-4fb7-a51d-02a3130b6b8f",
+                "uuid": "0c0c26ad-a0f0-4248-a004-334759f74d14",
                 "isHook": false,
                 "skipped": false
               },
@@ -218,14 +216,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({\n  items: [23, 23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:31:137)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:55:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n+   \"items\": [\n+     23\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "aa96872e-2e8f-4d0b-be3f-c964b2fbaace",
+                "uuid": "09e46e3a-06e0-41ed-81a7-fda3d1049b33",
                 "isHook": false,
                 "skipped": false
               },
@@ -238,14 +236,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({\n  items: [23, 23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:34:135)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:61:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n+   \"items\": [\n+     23\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "16854bd4-1230-4319-a8bf-bfe57b3d89eb",
+                "uuid": "cee5f9c5-5c57-4a22-8d4c-dcf1cca65869",
                 "isHook": false,
                 "skipped": false
               },
@@ -253,19 +251,19 @@
                 "title": "普通人员不占座婴儿的测试",
                 "fullTitle": "免费行李额度的测试 区域1航班的测试 普通人员不占座婴儿的测试",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域一))).to.be.deep.equal({\n  items: [10],\n  maxLength: 115\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:37:137)",
-                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:67:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n+   \"items\": [\n+     10\n+   ]\n+   \"maxLength\": 115\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "b4328988-f7df-4d54-b8d1-2876bac29756",
+                "uuid": "48244079-b135-468f-ac93-b460a433ba17",
                 "isHook": false,
                 "skipped": false
               }
@@ -273,11 +271,11 @@
             "suites": [],
             "passes": [],
             "failures": [
-              "7d4d3ab6-b12c-43ef-96ad-4490bb24c50e",
-              "20587c67-ee79-4fb7-a51d-02a3130b6b8f",
-              "aa96872e-2e8f-4d0b-be3f-c964b2fbaace",
-              "16854bd4-1230-4319-a8bf-bfe57b3d89eb",
-              "b4328988-f7df-4d54-b8d1-2876bac29756"
+              "98834249-acea-4c70-8a8b-2218b6cafeb4",
+              "0c0c26ad-a0f0-4248-a004-334759f74d14",
+              "09e46e3a-06e0-41ed-81a7-fda3d1049b33",
+              "cee5f9c5-5c57-4a22-8d4c-dcf1cca65869",
+              "48244079-b135-468f-ac93-b460a433ba17"
             ],
             "pending": [],
             "skipped": [],
@@ -287,7 +285,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "6eeca2c0-a4e9-4e99-9268-ec2306dfa8de",
+            "uuid": "ae4e2355-9476-4b1b-95b9-ab73383be21c",
             "title": "区域2航班的测试",
             "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
             "file": "\\test\\main.test.js",
@@ -303,14 +301,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({\n  items: [32, 32, 32],\n  maxLength: 158\n});",
                 "err": {
-                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:42:141)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                  "message": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:75:144)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "ee0710b8-eed9-4658-ab26-9b5a73686b26",
+                "uuid": "e94de824-1fa2-4ba8-96af-2a2851a9ac62",
                 "isHook": false,
                 "skipped": false
               },
@@ -323,14 +321,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({\n  items: [32, 32],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:45:141)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:81:144)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n+   \"items\": [\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "3993d4b6-db32-44a0-ac0f-805d45b1132e",
+                "uuid": "f836dc82-e18a-4b1c-941c-21a8f716d68b",
                 "isHook": false,
                 "skipped": false
               },
@@ -338,19 +336,19 @@
                 "title": "普通人员明珠经济舱的测试",
                 "fullTitle": "免费行李额度的测试 区域2航班的测试 普通人员明珠经济舱的测试",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({\n  items: [32],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:48:143)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:87:146)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 1\n+   \"items\": [\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "5587a43e-5e62-4909-9104-00aa382ae578",
+                "uuid": "8e1ff242-d303-436e-8cfe-ca4467878387",
                 "isHook": false,
                 "skipped": false
               },
@@ -363,14 +361,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({\n  items: [32],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:51:141)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:93:144)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 1\n+   \"items\": [\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "5d56ca2f-ec84-40e0-beaa-acc49ada2025",
+                "uuid": "66a8fafe-32f3-4f09-a268-cc1a6b23742b",
                 "isHook": false,
                 "skipped": false
               },
@@ -383,14 +381,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域二_不涉及美国))).to.be.deep.equal({\n  items: [10],\n  maxLength: 115\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:54:143)",
-                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:99:146)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n+   \"items\": [\n+     10\n+   ]\n+   \"maxLength\": 115\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "e7d5f444-679c-4a72-9a87-965b4bf4d639",
+                "uuid": "d044779d-a3dd-42a2-8086-d3c22800f7e6",
                 "isHook": false,
                 "skipped": false
               }
@@ -398,21 +396,21 @@
             "suites": [],
             "passes": [],
             "failures": [
-              "ee0710b8-eed9-4658-ab26-9b5a73686b26",
-              "3993d4b6-db32-44a0-ac0f-805d45b1132e",
-              "5587a43e-5e62-4909-9104-00aa382ae578",
-              "5d56ca2f-ec84-40e0-beaa-acc49ada2025",
-              "e7d5f444-679c-4a72-9a87-965b4bf4d639"
+              "e94de824-1fa2-4ba8-96af-2a2851a9ac62",
+              "f836dc82-e18a-4b1c-941c-21a8f716d68b",
+              "8e1ff242-d303-436e-8cfe-ca4467878387",
+              "66a8fafe-32f3-4f09-a268-cc1a6b23742b",
+              "d044779d-a3dd-42a2-8086-d3c22800f7e6"
             ],
             "pending": [],
             "skipped": [],
-            "duration": 1,
+            "duration": 0,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
           },
           {
-            "uuid": "7c6a32e6-de21-4b6c-be3a-3772ebbbbdbb",
+            "uuid": "6c1e2e4a-11ca-4c8f-8693-fcb5322eeca6",
             "title": "区域3航班的测试",
             "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
             "file": "\\test\\main.test.js",
@@ -428,14 +426,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({\n  items: [32, 32, 32],\n  maxLength: 158\n});",
                 "err": {
-                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:59:135)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                  "message": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:107:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "a155554c-e2d6-4ab5-94de-f64927df8bc6",
+                "uuid": "999aa903-04c0-4483-88e1-c99d0632f333",
                 "isHook": false,
                 "skipped": false
               },
@@ -448,14 +446,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({\n  items: [32, 32],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:62:135)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:113:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n+   \"items\": [\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "030b4903-cfbd-471f-a901-c98744affef4",
+                "uuid": "a6aec979-7e5d-4399-a5f9-248fa5e34198",
                 "isHook": false,
                 "skipped": false
               },
@@ -468,14 +466,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({\n  items: [23, 23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:65:137)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:119:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n+   \"items\": [\n+     23\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "cbb1fb83-6dd8-4cd3-ab74-eefafc308288",
+                "uuid": "cf74ba7b-a266-4edf-84a3-22d020855c11",
                 "isHook": false,
                 "skipped": false
               },
@@ -483,19 +481,19 @@
                 "title": "普通人员经济舱的测试",
                 "fullTitle": "免费行李额度的测试 区域3航班的测试 普通人员经济舱的测试",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({\n  items: [23, 23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:68:135)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:125:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n+   \"items\": [\n+     23\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "81bd3890-0125-49d0-ad57-b48a75859197",
+                "uuid": "d44b7de7-a588-40c4-891d-f1f941ffd88a",
                 "isHook": false,
                 "skipped": false
               },
@@ -508,14 +506,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域三))).to.be.deep.equal({\n  items: [10],\n  maxLength: 115\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:71:137)",
-                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:131:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n+   \"items\": [\n+     10\n+   ]\n+   \"maxLength\": 115\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "ef029668-d45e-4446-a435-8995ec53ad89",
+                "uuid": "ab7830cf-135d-4028-985c-41a102d51796",
                 "isHook": false,
                 "skipped": false
               }
@@ -523,21 +521,21 @@
             "suites": [],
             "passes": [],
             "failures": [
-              "a155554c-e2d6-4ab5-94de-f64927df8bc6",
-              "030b4903-cfbd-471f-a901-c98744affef4",
-              "cbb1fb83-6dd8-4cd3-ab74-eefafc308288",
-              "81bd3890-0125-49d0-ad57-b48a75859197",
-              "ef029668-d45e-4446-a435-8995ec53ad89"
+              "999aa903-04c0-4483-88e1-c99d0632f333",
+              "a6aec979-7e5d-4399-a5f9-248fa5e34198",
+              "cf74ba7b-a266-4edf-84a3-22d020855c11",
+              "d44b7de7-a588-40c4-891d-f1f941ffd88a",
+              "ab7830cf-135d-4028-985c-41a102d51796"
             ],
             "pending": [],
             "skipped": [],
-            "duration": 1,
+            "duration": 0,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
           },
           {
-            "uuid": "882ecc6d-6ece-4697-b0b0-4a9825d18266",
+            "uuid": "c2be9a6f-0dff-4169-b1cb-08aea6d64f52",
             "title": "区域4航班的测试",
             "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
             "file": "\\test\\main.test.js",
@@ -553,14 +551,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({\n  items: [32, 32, 32],\n  maxLength: 158\n});",
                 "err": {
-                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:76:135)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                  "message": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:139:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "a36c36c2-5dc2-4ec1-a5a2-8976a84e70af",
+                "uuid": "b235254d-cde0-46c0-8b09-946b29372d6c",
                 "isHook": false,
                 "skipped": false
               },
@@ -573,14 +571,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [23, 23, 23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({\n  items: [23, 23, 23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:79:135)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 3\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:145:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 3\n+   \"items\": [\n+     23\n+     23\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "3fb901a1-89fd-4bbe-baad-7857ba846940",
+                "uuid": "9a69c1fd-e9ae-4fbc-8937-6b132dc596ef",
                 "isHook": false,
                 "skipped": false
               },
@@ -588,19 +586,19 @@
                 "title": "普通人员明珠经济舱的测试",
                 "fullTitle": "免费行李额度的测试 区域4航班的测试 普通人员明珠经济舱的测试",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [23, 23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({\n  items: [23, 23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:82:137)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23, 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:151:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 2\n+   \"items\": [\n+     23\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "b6c6c64d-c5cf-4bcc-b6e7-2ce025709601",
+                "uuid": "087adef3-61aa-4545-a275-c1eeef0dbff3",
                 "isHook": false,
                 "skipped": false
               },
@@ -608,19 +606,19 @@
                 "title": "普通人员经济舱的测试",
                 "fullTitle": "免费行李额度的测试 区域4航班的测试 普通人员经济舱的测试",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({\n  items: [23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:85:135)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:157:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n+   \"items\": [\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "d6304e38-abc1-4f7d-8196-8b51dd67089b",
+                "uuid": "6e62bbc7-51bb-4e6f-9ebd-96fdef27c226",
                 "isHook": false,
                 "skipped": false
               },
@@ -633,14 +631,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域四))).to.be.deep.equal({\n  items: [10],\n  maxLength: 115\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:88:137)",
-                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:163:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n+   \"items\": [\n+     10\n+   ]\n+   \"maxLength\": 115\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "1cb850b1-962d-418d-8767-1af01a378620",
+                "uuid": "6dc130f1-e3cd-4dee-afe7-0b26d3dbd3a6",
                 "isHook": false,
                 "skipped": false
               }
@@ -648,11 +646,11 @@
             "suites": [],
             "passes": [],
             "failures": [
-              "a36c36c2-5dc2-4ec1-a5a2-8976a84e70af",
-              "3fb901a1-89fd-4bbe-baad-7857ba846940",
-              "b6c6c64d-c5cf-4bcc-b6e7-2ce025709601",
-              "d6304e38-abc1-4f7d-8196-8b51dd67089b",
-              "1cb850b1-962d-418d-8767-1af01a378620"
+              "b235254d-cde0-46c0-8b09-946b29372d6c",
+              "9a69c1fd-e9ae-4fbc-8937-6b132dc596ef",
+              "087adef3-61aa-4545-a275-c1eeef0dbff3",
+              "6e62bbc7-51bb-4e6f-9ebd-96fdef27c226",
+              "6dc130f1-e3cd-4dee-afe7-0b26d3dbd3a6"
             ],
             "pending": [],
             "skipped": [],
@@ -662,7 +660,7 @@
             "_timeout": 2000
           },
           {
-            "uuid": "30a4995a-b7fa-4e6d-9348-d7ee0930c016",
+            "uuid": "24a8f2a4-6697-487a-a87d-4ba7cf727ceb",
             "title": "区域5航班的测试",
             "fullFile": "F:\\Project\\webstrom\\ST1\\test\\main.test.js",
             "file": "\\test\\main.test.js",
@@ -673,19 +671,19 @@
                 "title": "普通人员头等舱的测试",
                 "fullTitle": "免费行李额度的测试 区域5航班的测试 普通人员头等舱的测试",
                 "timedOut": false,
-                "duration": 1,
+                "duration": 0,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [32, 32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.头等舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({\n  items: [32, 32, 32],\n  maxLength: 158\n});",
                 "err": {
-                  "message": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }",
-                  "estack": "AssertionError: expected { Object (maxWeight, maxLength, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:93:135)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n }\n"
+                  "message": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }",
+                  "estack": "AssertionError: expected { Object (maxWeight, maxSize, ...) } to deeply equal { Object (items, maxLength) }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:171:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 3\n+   \"items\": [\n+     32\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "b4f0e502-ba4e-44f2-9751-7edb9dae1329",
+                "uuid": "b345a4c1-483e-4346-a084-786230b987ea",
                 "isHook": false,
                 "skipped": false
               },
@@ -693,19 +691,19 @@
                 "title": "普通人员公务舱的测试",
                 "fullTitle": "免费行李额度的测试 区域5航班的测试 普通人员公务舱的测试",
                 "timedOut": false,
-                "duration": 0,
+                "duration": 1,
                 "state": "failed",
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [32, 32], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.公务舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({\n  items: [32, 32],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:96:135)",
-                  "diff": " {\n+   \"items\": [\n+     32\n+     32\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 32, 32 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:177:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 32\n-   \"number\": 2\n+   \"items\": [\n+     32\n+     32\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "a7d7938c-ab60-4e42-85fb-8daa62e96433",
+                "uuid": "2d8eca45-9081-4f6a-99c3-8d1629a3a538",
                 "isHook": false,
                 "skipped": false
               },
@@ -718,14 +716,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.明珠经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({\n  items: [23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:99:137)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:183:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n+   \"items\": [\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "2479f19e-a25b-417d-b265-c463b3931a64",
+                "uuid": "7fbcde29-87b4-41ba-991e-024f1283c471",
                 "isHook": false,
                 "skipped": false
               },
@@ -738,14 +736,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [23], maxLength: 158 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.经济舱, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({\n  items: [23],\n  maxLength: 158\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:102:135)",
-                  "diff": " {\n+   \"items\": [\n+     23\n+   ]\n   \"maxLength\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 23 ], maxLength: 158 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:189:138)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 158\n-   \"maxWeight\": 23\n-   \"number\": 1\n+   \"items\": [\n+     23\n+   ]\n+   \"maxLength\": 158\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "c3bab6f6-e3d0-4633-ab2d-391a36a6a22b",
+                "uuid": "2668f557-2f2d-4bd5-b0b1-c74638b09cbf",
                 "isHook": false,
                 "skipped": false
               },
@@ -758,14 +756,14 @@
                 "pass": false,
                 "fail": true,
                 "pending": false,
-                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({ items: [10], maxLength: 115 });",
+                "code": "expect(getFreeBabbage(new Traveler(Traveler.Type.不占座婴儿, Traveler.SpecialType.普通人员), new Flight('', '', Flight.Type.区域五))).to.be.deep.equal({\n  items: [10],\n  maxLength: 115\n});",
                 "err": {
                   "message": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }",
-                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:105:137)",
-                  "diff": " {\n+   \"items\": [\n+     10\n+   ]\n   \"maxLength\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n }\n"
+                  "estack": "AssertionError: expected { Object (maxWeight, number, ...) } to deeply equal { items: [ 10 ], maxLength: 115 }\n    at Proxy.assertEqual (node_modules\\_chai@4.1.2@chai\\lib\\chai\\core\\assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules\\_chai@4.1.2@chai\\lib\\chai\\utils\\addMethod.js:57:25)\n    at Context.<anonymous> (F:/Project/webstrom/ST1/test/main.test.js:195:140)\n    at callFn (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:378:21)\n    at Test.Runnable.run (node_modules\\_mocha@5.0.5@mocha\\lib\\runnable.js:370:7)\n    at Runner.runTest (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:442:10)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:560:12\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:356:14)\n    at F:\\Project\\webstrom\\ST1\\node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:366:7\n    at next (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:290:14)\n    at Immediate._onImmediate (node_modules\\_mocha@5.0.5@mocha\\lib\\runner.js:334:5)",
+                  "diff": " {\n-   \"maxSize\": 115\n-   \"maxWeight\": 0\n-   \"number\": 1\n+   \"items\": [\n+     10\n+   ]\n+   \"maxLength\": 115\n }\n"
                 },
                 "isRoot": false,
-                "uuid": "4ca9235a-6085-4d51-9028-bd2a413c6304",
+                "uuid": "d4675710-8a72-47a1-bc94-204075aa0ee9",
                 "isHook": false,
                 "skipped": false
               }
@@ -773,11 +771,11 @@
             "suites": [],
             "passes": [],
             "failures": [
-              "b4f0e502-ba4e-44f2-9751-7edb9dae1329",
-              "a7d7938c-ab60-4e42-85fb-8daa62e96433",
-              "2479f19e-a25b-417d-b265-c463b3931a64",
-              "c3bab6f6-e3d0-4633-ab2d-391a36a6a22b",
-              "4ca9235a-6085-4d51-9028-bd2a413c6304"
+              "b345a4c1-483e-4346-a084-786230b987ea",
+              "2d8eca45-9081-4f6a-99c3-8d1629a3a538",
+              "7fbcde29-87b4-41ba-991e-024f1283c471",
+              "2668f557-2f2d-4bd5-b0b1-c74638b09cbf",
+              "d4675710-8a72-47a1-bc94-204075aa0ee9"
             ],
             "pending": [],
             "skipped": [],
