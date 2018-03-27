@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
+mochawesome-report/
 # Logs
 logs
 *.log
@@ -61,4 +62,3 @@ typings/
 
 # next.js build output
 .next
-
