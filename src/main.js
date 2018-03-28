@@ -36,8 +36,8 @@ Flight.FlightType = {
 };
 
 
-function getFreeBaggage(start, end, flightType, travelerType) {
-  let flight = new Flight(start, end, flightType, travelerType)
+function getFreeBaggage(start, end, flightType, travelerType,price) {
+  let flight = new Flight(start, end, flightType, travelerType,price)
   console.log(flight)
   let result = {}
   switch (flight.travelerType) {
@@ -247,34 +247,34 @@ function _howMuch(flight, freeBaggage, myBaggages) {
                 switch (flight.travelerType) {
                   case Flight.TravelerType.头等舱:
                   case Flight.TravelerType.公务舱:
-                    tag.price += 3000;
+                    tag.price = 3000;
                     break;
                   default:
-                    tag.price += baggage.weight > 32 ? 3000 : 1000;
+                    tag.price = baggage.weight > 32 ? 3000 : 1000;
                     break;
                 }
                 break;
               case Flight.FlightType.区域二:
-                tag.price += baggage.weight > 32 ? 3000 : 1000;
+                tag.price = baggage.weight > 32 ? 3000 : 1000;
                 break;
               case Flight.FlightType.区域三:
                 switch (flight.travelerType) {
                   case Flight.TravelerType.头等舱:
                   case Flight.TravelerType.公务舱:
-                    tag.price += 3000;
+                    tag.price = 3000;
                     break;
                   default:
-                    tag.price += baggage.weight > 32 ? 3000 : 2000;
+                    tag.price = baggage.weight > 32 ? 3000 : 2000;
                     break;
                 }
                 break;
               default:
                 switch (flight.travelerType) {
                   case Flight.TravelerType.头等舱:
-                    tag.price += 3000;
+                    tag.price = 3000;
                     break;
                   default:
-                    tag.price += baggage.weight > 32 ? 3000 : 1000;
+                    tag.price = baggage.weight > 32 ? 3000 : 1000;
                     break;
                 }
                 break;
@@ -298,7 +298,9 @@ function _howMuch(flight, freeBaggage, myBaggages) {
   }
   for(let baggage of myBaggages){
     for(let tag of baggage.tags){
+      console.log(tag)
       if('price' in tag){
+        console.log(tag.price,price)
         price += tag.price;
       }
     }
@@ -306,7 +308,6 @@ function _howMuch(flight, freeBaggage, myBaggages) {
   return canI?price:-1;
 }
 function howMuch(start, end, flightType, travelerType,price,...baggages){
-  console.log(start, end, flightType, travelerType,price,...baggages);
   let flight=new Flight(start, end, flightType, travelerType,price);
   let myBaggages=[]
   for(let b of baggages){

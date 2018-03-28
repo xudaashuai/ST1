@@ -5,6 +5,8 @@ mochawesome-report/
 mochawesome-report/
 .idea/
 .git/
+dist/
+min/
 .node_modules/
 # Logs
 logs
