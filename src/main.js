@@ -165,7 +165,7 @@ function getFreeBabbage(traveler, flight) {
           break;
         default:
           result = {
-            maxWeight: 0,
+            maxWeight: 10,
             number:1,
             maxSize: 115
           }
