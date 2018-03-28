@@ -1,6 +1,5 @@
 import data from '../static/data.json'
-// 行李信息
-console.log(data)
+
 class Baggage {
   constructor(weight, length, width, height) {
     this.weight = weight;
@@ -13,36 +12,22 @@ class Baggage {
   }
 }
 
-// 游客信息
-class Traveler {
-  constructor(type, special) {
-    this.type = type;
-    this.special = special
+class Flight {
+  constructor(start, end,flightType,travelerType) {
+    this.start = start;
+    this.end = end;
+    this.flightType = Flight.FlightType[flightType];
+    this.travelerType =Flight.TravelerType[travelerType]
   }
 }
-Traveler.SpecialType = {
-  超级会员: 0,
-  会员: 1,
-  特殊工作人员: 2,
-  普通人员: 3
-};
-Traveler.Type = {
+Flight.TravelerType = {
   头等舱: 0,
   公务舱: 1,
   经济舱: 2,
   明珠经济舱: 3,
   不占座婴儿: 4
 };
-
-// 航班信息
-class Flight {
-  constructor(start, end,type) {
-    this.start = start;
-    this.end = end;
-    this.type = type
-  }
-}
-Flight.Type = {
+Flight.FlightType = {
   国内航班: 0,
   区域一: 1,
   区域二_涉及美国: 2,
@@ -52,17 +37,15 @@ Flight.Type = {
   区域五: 6,
 };
 
-// 完整的一次旅行信息
-function func(weight, length, width, height, type, special, start, end) {
 
-}
-
-function getFreeBabbage(traveler, flight) {
+function getFreeBabbage(start, end,flightType,travelerType) {
+  let flight = new Flight(start, end,flightType,travelerType)
+  console.log(flight)
   let result = {}
-  switch (traveler.type) {
-    case Traveler.Type.头等舱:
-      switch (flight.type) {
-        case Flight.Type.国内航班:
+  switch (flight.travelerType) {
+    case Flight.TravelerType.头等舱:
+      switch (flight.flightType) {
+        case Flight.FlightType.国内航班:
           result = {
             maxWeight: 40,
             number:1,
@@ -80,9 +63,9 @@ function getFreeBabbage(traveler, flight) {
           break;
       }
       break;
-    case Traveler.Type.公务舱:
-      switch (flight.type) {
-        case  Flight.Type.国内航班:
+    case Flight.TravelerType.公务舱:
+      switch (flight.flightType) {
+        case  Flight.FlightType.国内航班:
           result = {
             maxWeight: 30,
             number:1,
@@ -91,7 +74,7 @@ function getFreeBabbage(traveler, flight) {
             maxHeight:100
           }
           break;
-        case  Flight.Type.区域四:
+        case  Flight.FlightType.区域四:
           result = {
             maxWeight: 23,
             number:3,
@@ -107,8 +90,8 @@ function getFreeBabbage(traveler, flight) {
           break;
       }
       break;
-    case Traveler.Type.明珠经济舱:
-      if  (flight.type=== Flight.Type.区域四) {
+    case Flight.TravelerType.明珠经济舱:
+      if  (flight.flightType=== Flight.FlightType.区域四) {
           result = {
             maxWeight: 23,
             number:2,
@@ -116,9 +99,9 @@ function getFreeBabbage(traveler, flight) {
           }
           break;
       }
-    case Traveler.Type.经济舱:
-      switch (flight.type) {
-        case  Flight.Type.国内航班:
+    case Flight.TravelerType.经济舱:
+      switch (flight.flightType) {
+        case  Flight.FlightType.国内航班:
           result = {
             maxWeight: 20,
             number:1,
@@ -127,16 +110,16 @@ function getFreeBabbage(traveler, flight) {
             maxHeight:100
           }
           break;
-        case  Flight.Type.区域二_不涉及美国:
-        case  Flight.Type.区域二_涉及美国:
+        case  Flight.FlightType.区域二_不涉及美国:
+        case  Flight.FlightType.区域二_涉及美国:
           result = {
             maxWeight: 32,
             number:1,
             maxSize: 158
           }
           break;
-        case  Flight.Type.区域四:
-        case  Flight.Type.区域五:
+        case  Flight.FlightType.区域四:
+        case  Flight.FlightType.区域五:
           result = {
             maxWeight: 23,
             number:1,
@@ -152,9 +135,9 @@ function getFreeBabbage(traveler, flight) {
           break;
       }
       break;
-    case Traveler.Type.不占座婴儿:
-      switch (flight.type) {
-        case  Flight.Type.国内航班:
+    case Flight.TravelerType.不占座婴儿:
+      switch (flight.flightType) {
+        case  Flight.FlightType.国内航班:
           result = {
             maxWeight: 10,
             number:1,
@@ -165,7 +148,7 @@ function getFreeBabbage(traveler, flight) {
           break;
         default:
           result = {
-            maxWeight: 0,
+            maxWeight: 10,
             number:1,
             maxSize: 115
           }
@@ -173,8 +156,10 @@ function getFreeBabbage(traveler, flight) {
       }
       break;
   }
+  console.log(result)
   return result
 }
+<<<<<<< HEAD
 function canI(flight,baggage){
     let  prop=['weight','height','length','size','width']
     switch(flighr.type){
@@ -201,6 +186,12 @@ function canITake(flight,baggage){
                 && baggage.length <= 60;
 
     }
+=======
+function canITake(babbages) {
+  for(let babbage of babbages){
+
+  }
+>>>>>>> ecfe1d0a6fe6ef52abf33272b7d97dfba8af01a6
 }
 function howMuch(freeBabbage,myBabbage) {
   let result ={}
@@ -210,14 +201,12 @@ function howMuch(freeBabbage,myBabbage) {
         if (result.overWeight)result.overWeight=[]
         result.overWeight.push(babbage)
       }else{
-
       }
     }
   }
 }
 export {
   getFreeBabbage,
-  Traveler,
   Flight,
   Baggage
 };
