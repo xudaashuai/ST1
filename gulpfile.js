@@ -6,5 +6,5 @@ gulp.task('mocha', function () {
 
 gulp.task('m', function () {
   cmd.run('mocha')
-  gulp.watch('./test/*', ['mocha']); // 注意，任务列表是个数组，即使只有一个元素。
+  gulp.watch(['./test/*','./src/*'], ['mocha']); // 注意，任务列表是个数组，即使只有一个元素。
 });

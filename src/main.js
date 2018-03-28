@@ -11,8 +11,9 @@ class Baggage {
 }
 
 class Flight {
-  constructor(start, end, flightType, travelerType) {
+  constructor(start, end, flightType, travelerType,price) {
     this.start = start;
+    this.price = price
     this.end = end;
     this.flightType = Flight.FlightType[flightType];
     this.travelerType = Flight.TravelerType[travelerType]
@@ -205,8 +206,8 @@ function _howMuch(flight, freeBaggage, myBaggages) {
           })
         } else {
           baggage.tags.push({
-            'info': i === 0 ? '超重' : '超件',
-            'price': 0.015 * flight.price * i === 0 ? baggage.weight - freeBaggage.maxWeight : baggage.weight
+            'info': i == 0 ? '超重' : '超件',
+            'price': 0.015 * flight.price * (i == 0 ? baggage.weight - freeBaggage.maxWeight : baggage.weight)
           })
         }
       }
@@ -306,7 +307,7 @@ function _howMuch(flight, freeBaggage, myBaggages) {
 }
 function howMuch(start, end, flightType, travelerType,price,...baggages){
   console.log(start, end, flightType, travelerType,price,...baggages);
-  let flight=new Flight(start, end, flightType, travelerType);
+  let flight=new Flight(start, end, flightType, travelerType,price);
   let myBaggages=[]
   for(let b of baggages){
     myBaggages.push(new Baggage(...b))
