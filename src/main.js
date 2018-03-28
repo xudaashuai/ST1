@@ -169,8 +169,21 @@ function canITake(start, end, flightType, travelerType, weight, length, width, h
         baggage.weight <= 45;
   }
 }
+function _canITake(flight,baggage) {
+  switch (flight.flightType) {
+    case Flight.FlightType.国内航班:
+      return baggage.width <= 40 &&
+        baggage.height <= 100 &&
+        baggage.length <= 60 &&
+        baggage.weight <= 50
+    default:
+      return baggage.size <= 300 &&
+        baggage.weight <= 45;
+  }
+}
 
 function _howMuch(flight, freeBaggage, myBaggages) {
+  console.log(flight,freeBaggage,myBaggages)
   myBaggages.sort((a, b) => a.weight > b.weight)
   let number = freeBaggage.number;
   let canI = true;
@@ -180,7 +193,7 @@ function _howMuch(flight, freeBaggage, myBaggages) {
       for (let i in myBaggages) {
         let baggage = myBaggages[i];
         baggage.tags = [];
-        if (!canITake(flight, baggage)) {
+        if (!_canITake(flight, baggage)) {
           // 你的行李不能被带上飞机哦
           canI = false;
           baggage.tags.push({
@@ -202,7 +215,7 @@ function _howMuch(flight, freeBaggage, myBaggages) {
       for (let i in myBaggages) {
         let baggage = myBaggages[i];
         baggage.tags = [];
-        if (!canITake(flight, baggage)) {
+        if (!_canITake(flight, baggage)) {
           // 你的行李不能被带上飞机哦
           canI = false;
           baggage.tags.push({
@@ -285,13 +298,14 @@ function _howMuch(flight, freeBaggage, myBaggages) {
   for(let baggage of myBaggages){
     for(let tag of baggage.tags){
       if('price' in tag){
-        price += tag[price];
+        price += tag.price;
       }
     }
   }
   return canI?price:-1;
 }
 function howMuch(start, end, flightType, travelerType,price,...baggages){
+  console.log(start, end, flightType, travelerType,price,...baggages);
   let flight=new Flight(start, end, flightType, travelerType);
   let myBaggages=[]
   for(let b of baggages){
