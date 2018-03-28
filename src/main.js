@@ -175,6 +175,33 @@ function getFreeBabbage(traveler, flight) {
   }
   return result
 }
+function canI(flight,baggage){
+    let  prop=['weight','height','length','size','width']
+    switch(flighr.type){
+        case Flight.Type.国内航班:
+            for (let key of prop){
+                let testKey = 'max'+key.substring(0,1).toUpperCase()+key.substring(1,);
+            }
+    }
+}
+function canITake(flight,baggage){
+    let  prop=['weight','height','length','size','width']
+    switch(flighr.type){
+        case Flight.Type.国内航班:
+            return
+                baggage.weight<= 50
+                && baggage.height <=120
+                && baggage.width <= 40
+                && baggage.length <= 60;
+        case Flight.Type.国内航班:
+            return
+                baggage.weight<= 50
+                && baggage.height <=120
+                && baggage.width <= 40
+                && baggage.length <= 60;
+
+    }
+}
 function howMuch(freeBabbage,myBabbage) {
   let result ={}
   for(let babbage in myBabbage){
