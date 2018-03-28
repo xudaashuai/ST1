@@ -3,6 +3,9 @@
 mochawesome-report/
 ### Node template
 mochawesome-report/
+.idea/
+.git/
+.node_modules/
 # Logs
 logs
 *.log
