@@ -1,94 +1,68 @@
 {
-  "getFreeBabbage": [{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  },{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  },{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  },{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  },{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  },{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  },{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  },{
-    "input": {
-      "Traveler":["经济舱","普通人员"],
-      "Flight":["","","区域一"]
-    },
-    "output":{
-      "maxWeight":23,
-      "number": 2,
-      "maxSize": 158
-    }
-  }],
-  "howMuch":[
+  "getFreeBabbage": [
     {
-      "input":{
-        "Traveler":["经济舱","普通人员"],
-        "Flight":["","","区域一"],
-        "Babbage":[
-          [20,40,100,100],
-          [20,40,100,100],
-          [20,40,100,100]
+      "name":"经济舱国内航班测试",
+      "input": [
+        "",
+        "",
+        "国内航班",
+        "经济舱"
+      ],
+      "output": {
+        "maxWeight": 20,
+        "number": 1,
+        "maxLength": 60,
+        "maxHeight": 100,
+        "maxWidth": 40
+      }
+    },
+    {
+      "name":"经济舱国内航班测试",
+      "input": [
+        "",
+        "",
+        "国内航班",
+        "经济舱"
+      ],
+      "output": {
+        "maxWeight": 20,
+        "number": 1,
+        "maxLength": 60,
+        "maxHeight": 100,
+        "maxWidth": 40
+      }
+    }
+  ],
+  "howMuch": [
+    {
+      "input": {
+        "Traveler": [
+          "经济舱"
+        ],
+        "Flight": [
+          "",
+          "",
+          "区域一"
+        ],
+        "Babbage": [
+          [
+            20,
+            40,
+            100,
+            100
+          ],
+          [
+            20,
+            40,
+            100,
+            100
+          ],
+          [
+            20,
+            40,
+            100,
+            100
+          ]
         ]
       }
     }
