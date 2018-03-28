@@ -6,7 +6,7 @@ class Baggage {
     this.length = length;
     this.width = width;
     this.height = height;
-    this.size=this.width + this.length + this.height;
+    this.size = this.width + this.length + this.height;
   }
 }
 
@@ -28,11 +28,10 @@ Flight.TravelerType = {
 Flight.FlightType = {
   国内航班: 0,
   区域一: 1,
-  区域二_涉及美国: 2,
-  区域二_不涉及美国: 3,
-  区域三: 4,
-  区域四: 5,
-  区域五: 6,
+  区域二: 2,
+  区域三: 3,
+  区域四: 4,
+  区域五: 5,
 };
 
 
@@ -108,8 +107,7 @@ function getFreeBaggage(start, end, flightType, travelerType) {
             maxHeight: 100
           }
           break;
-        case Flight.FlightType.区域二_不涉及美国:
-        case Flight.FlightType.区域二_涉及美国:
+        case Flight.FlightType.区域二:
           result = {
             maxWeight: 32,
             number: 1,
@@ -162,33 +160,149 @@ function canITake(start, end, flightType, travelerType, weight, length, width, h
   let baggage = new Baggage(weight, length, width, height);
   switch (flight.flightType) {
     case Flight.FlightType.国内航班:
-      return baggage.width <= 40
-        && baggage.height <= 100
-        && baggage.length <= 60
-        && baggage.weight <= 50
-    case Flight.FlightType.区域二_涉及美国:
-      return baggage.size <= 158
-        && baggage.weight <= 45;
+      return baggage.width <= 40 &&
+        baggage.height <= 100 &&
+        baggage.length <= 60 &&
+        baggage.weight <= 50
     default:
-      return baggage.size <= 158
-        && baggage.weight <= 32;
+      return baggage.size <= 300 &&
+        baggage.weight <= 45;
   }
 }
 
-function howMuch(flight,freeBaggage, myBaggages) {
-  myBaggages.sort((a,b)=>a.weight>b.weight)
-  console.(myBaggages)
-  let result = {}
-  for (let baggage in myBaggages) {
-    if(!canITake(flight,baggage)){
-      // 你的行李不能被带上飞机哦
-      return -1;
+function _howMuch(flight, freeBaggage, myBaggages) {
+  myBaggages.sort((a, b) => a.weight > b.weight)
+  let number = freeBaggage.number;
+  let canI = true;
+  let price = 0;
+  switch (flight.flightType) {
+    case Flight.FlightType.国内航班:
+      for (let i in myBaggages) {
+        let baggage = myBaggages[i];
+        baggage.tags = [];
+        if (!canITake(flight, baggage)) {
+          // 你的行李不能被带上飞机哦
+          canI = false;
+          baggage.tags.push({
+            info: '禁止',
+          })
+        } else if (baggage.weight <= freeBaggage.maxWeight) {
+          baggage.tags.push({
+            'info': '免费'
+          })
+        } else {
+          baggage.tags.push({
+            'info': i === 0 ? '超重' : '超件',
+            'price': 0.015 * flight.price * i === 0 ? baggage.weight - freeBaggage.maxWeight : baggage.weight
+          })
+        }
+      }
+      break;
+    default:
+      for (let i in myBaggages) {
+        let baggage = myBaggages[i];
+        baggage.tags = [];
+        if (!canITake(flight, baggage)) {
+          // 你的行李不能被带上飞机哦
+          canI = false;
+          baggage.tags.push({
+            info: '禁止',
+          })
+        } else {
+          if (i >= freeBaggage.number) {
+            let tag = {
+              info: '超件' + (i - freeBaggage.number + 1),
+            }
+            switch (flight.flightType) {
+              case Flight.FlightType.区域一:
+              case Flight.FlightType.区域三:
+                tag.price = i - freeBaggage.number === 0 ? 1000 : 2000;
+                break;
+              default:
+                tag.price = i - freeBaggage.number === 0 ? 450 : 1300;
+                break;
+            }
+            baggage.tags.push(tag)
+          }
+          if (baggage.weight > freeBaggage.maxWeight) {
+            let tag = {
+              info: '超重',
+            }
+            switch (flight.flightType) {
+              case Flight.FlightType.区域一:
+                switch (flight.travelerType) {
+                  case Flight.TravelerType.头等舱:
+                  case Flight.TravelerType.公务舱:
+                    tag.price += 3000;
+                    break;
+                  default:
+                    tag.price += baggage.weight > 32 ? 3000 : 1000;
+                    break;
+                }
+                break;
+              case Flight.FlightType.区域二:
+                tag.price += baggage.weight > 32 ? 3000 : 1000;
+                break;
+              case Flight.FlightType.区域三:
+                switch (flight.travelerType) {
+                  case Flight.TravelerType.头等舱:
+                  case Flight.TravelerType.公务舱:
+                    tag.price += 3000;
+                    break;
+                  default:
+                    tag.price += baggage.weight > 32 ? 3000 : 2000;
+                    break;
+                }
+                break;
+              default:
+                switch (flight.travelerType) {
+                  case Flight.TravelerType.头等舱:
+                    tag.price += 3000;
+                    break;
+                  default:
+                    tag.price += baggage.weight > 32 ? 3000 : 1000;
+                    break;
+                }
+                break;
+            }
+            baggage.tags.push(tag)
+          }
+          if (baggage.size > freeBaggage.maxSize) {
+            let tag = {
+              info: '超尺寸',
+              price: 1000,
+            }
+            baggage.tags.push(tag)
+          }
+          if (baggage.tags.length === 0) {
+            baggage.tags.push({
+              'info':'免费',
+            })
+          }
+        }
+      }
+  }
+  for(let baggage of myBaggages){
+    for(let tag of baggage.tags){
+      if('price' in tag){
+        price += tag[price];
+      }
     }
   }
+  return canI?price:-1;
+}
+function howMuch(start, end, flightType, travelerType,price,...baggages){
+  let flight=new Flight(start, end, flightType, travelerType);
+  let myBaggages=[]
+  for(let b of baggages){
+    myBaggages.push(new Baggage(...b))
+  }
+  return _howMuch(flight,getFreeBaggage(start, end, flightType, travelerType,price),myBaggages);
 }
 export {
   getFreeBaggage,
   Flight,
   Baggage,
-  canITake
+  canITake,
+  howMuch
 };
