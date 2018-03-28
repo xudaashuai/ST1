@@ -183,7 +183,6 @@ function howMuch(freeBabbage,myBabbage) {
         if (result.overWeight)result.overWeight=[]
         result.overWeight.push(babbage)
       }else{
-
       }
     }
   }
